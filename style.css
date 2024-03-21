@@ -2,6 +2,7 @@
 html {
   box-sizing: border-box;
 }
+
 *,
 ::after,
 ::before {
@@ -12,9 +13,31 @@ body {
   font: 16px/1.5 sans-serif;
 }
 
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header p {
+  text-align: right;
+  margin-left: 18px;
+}
+
+.galerie {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 img {
-  display: block;
-  width: 100%;
+  max-width: 50%;
+
+  @media screen and (min-width: 1024px) {
+    max-width: calc(100% / 3);
+  }
+
+  @media screen and (min-width: 2100px) {
+    max-width: calc(100% / 4);
+  }
 }
 
 h1 {
@@ -34,5 +57,3 @@ Potom zkuste třeba tři nebo čtyři sloupce.
 
 Pro každou variantu si pomocí devtools udělejte screenshot.
 */
-
-
